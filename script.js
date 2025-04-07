@@ -29,6 +29,9 @@ curtains.addEventListener('click', () => {
 
     leftCurtain.classList.toggle('opened')
     rightCurtain.classList.toggle('opened')
+
+    const screenWidth = window.screen.width
+    alert(screenWidth)
 })
 
 // When we request a new riddle, close curtains, then fetch riddle

@@ -121,7 +121,7 @@ p {
     }
 }
 
-@media screen and (max-width: 900) {
+@media screen and (max-width: 950) {
     html, body {
         height: 100%;
     }

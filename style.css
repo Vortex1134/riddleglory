@@ -7,4 +7,125 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 70%);
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    padding: 2rem;
+    width: 90vw;
+    min-height: 75vh;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 15%);
+    box-shadow: 0 0 20px hsl(0, 0%, 25%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.curtains {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+    display: flex;
+    cursor: pointer;
+}
+
+.left-curtain,
+.right-curtain {
+    transition: transform 2s ease;
+}
+
+.left-curtain {
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    border-right: 1px solid black;
+    background-color: hsl(0, 25%, 25%);
+}
+
+.left-curtain.opened {
+    transform: translateX(-100%);
+}
+
+.right-curtain {
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    border-left: 1px solid black;
+    background-color: hsl(210, 25%, 25%);
+}
+
+.right-curtain.opened {
+    transform: translateX(100%);
+}
+
+#answer {
+    margin: 0;
+    padding: 0.5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px dashed black;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    place-self: center;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(240, 50%, 50%);
+    color: hsl(240, 50%, 10%);
+    box-shadow: 0 0 20px hsl(240, 75%, 50%);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: hsl(240, 50%, 10%);
+        color: hsl(240, 50%, 50%);
+        box-shadow: 0 0 20px hsl(240, 75%, 10%);
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 950px) and (orientation: landscape) {
+    .container {
+        width: 90vw;
+        height: 85vh;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        width: 85vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: initial;
+        min-height: initial;
+        border-radius: unset;
+        box-shadow: 0 0 5rem hsl(0, 0%, 100%);
+    }
 }

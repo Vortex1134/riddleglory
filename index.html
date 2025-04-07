@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Riddle Glory</title>
 
     <!-- Favicon -->
      <link rel="icon" type="image/png" href="favicon-16x16.png">
-    
-     <!-- Font Awesome v5 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <div class="container">
+        <h1>Riddle:</h1>
+        <p id="riddleText">Please wait while I think of a riddle...</p>
+        <div class="curtains" title="Click to reveal the answer!">
+            <div class="left-curtain"></div>
+            <div class="right-curtain"></div>
+            <p id="answer">Loading...</p>
+        </div>
+        <button class="btn-primary">New Riddle</button>
+    </div>
     <!-- Script -->
     <script src="script.js"></script>
 </body>
